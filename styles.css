@@ -54,6 +54,10 @@ body {
   background-color: #ffebcd;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .seccion_principal {
   text-align: center;
   padding: 3rem 1rem;
@@ -361,9 +365,9 @@ button {
   }
 .seccion_principal h2 {
 
-  font-size: 2em;
+  font-size: 5em;
 }
-  .cupcake {
+  .imagen-cupcake {
     max-width: 200px;
     margin-top: -3rem;
   }
