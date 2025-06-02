@@ -9,14 +9,6 @@ body {
   color: #333;
 }
 
-.contenedor {
-  width: 90%;
-  max-width: 1200px;
-  margin: 20px auto;
-  border: 2px solid #ddd;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
 .header {
   background: #ff6f61;
   background: linear-gradient(
@@ -62,7 +54,7 @@ body {
   background-color: #ffebcd;
 }
 
-.hero {
+.seccion_principal {
   text-align: center;
   padding: 3rem 1rem;
   background: linear-gradient(
@@ -75,7 +67,7 @@ body {
   animation: fadeIn 1.5s;
 }
 
-.hero h2 {
+.seccion_principal h2 {
   font-size: 20rem;
   font-weight: bold;
 }
@@ -203,32 +195,32 @@ body {
   text-transform: lowercase;
 }
 .tortas {
-  background-image: url(/img/torta.png);
+  background-image: url(img/torta.png);
   background-color: #3d0d0d;
 }
 
 .cupcake {
-  background-image: url(/img/cupcake.png);
+  background-image: url(img/cupcake.png);
   background-color: #637c2e;
 }
 
 .bombones {
-  background-image: url(/img/bombones.png);
+  background-image: url(img/bombones.png);
   background-color: #7e4149;
 }
 
 .patisserie {
-  background-image: url(/img/rool\ de\ canela.png);
+  background-image: url(img/rool\ de\ canela.png);
   background-color: #e2a9b6;
 }
 
 .macarons {
-  background-image: url(/img/macaron.png);
+  background-image: url(img/macaron.png);
   background-color: #b37040;
 }
 
 .cookies {
-  background-image: url(/img/cookies.png);
+  background-image: url(img/cookies.png);
   background-color: #e26363;
 }
 
@@ -342,6 +334,41 @@ button {
 }
 
 /* Responsive */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    text-align: right;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .seccion_principal h1 {
+    font-size: 5rem;
+  }
+.seccion_principal h2 {
+
+  font-size: 2em;
+}
+  .cupcake {
+    max-width: 200px;
+    margin-top: -3rem;
+  }
+}
+
 
 @media (max-width: 900px) {
   .categoria {
