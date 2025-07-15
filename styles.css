@@ -7,6 +7,13 @@
 body {
   font-family: "monserrat", sans-serif;
   color: #333;
+   background: #ff6f61;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 111, 97, 1) 0%,
+    rgba(255, 127, 80, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 .header {
@@ -26,7 +33,16 @@ body {
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
+  padding: 2em 4em;
 }
+
+.navbar .logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,14 +50,25 @@ body {
   padding: 2em 4em;
 }
 
+
 .navbar ul {
   display: wrap;
 }
 
-.nav-links {
+
+  .nav-links {
   display: flex;
+  gap: 1.5rem;
   list-style: none;
-  gap: 2em;
+  margin: 0;
+  padding: 0;
+
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 .navbar a {
@@ -56,7 +83,15 @@ body {
 
 .menu-toggle {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1.5rem;
+  color: #333;
 }
+
+
 
 .seccion_principal {
   text-align: center;
@@ -98,6 +133,7 @@ body {
   z-index: 1;
 }
 
+
 .imagen-cupcake {
   width: 500px;
   position: relative;
@@ -105,10 +141,11 @@ body {
   margin-top: -300px;
 }
 
+
 /* reseñas */
 
 .seccion-reseñas {
-  background-color: #f17272;
+  background-color:aquamarine;
   padding: 4rem 2rem;
 }
 
@@ -119,6 +156,15 @@ body {
   margin: 0 auto;
   gap: 2rem;
   align-items: start;
+}
+
+.titulo-ofertas {
+  font-size: 500px;
+  font-weight: 900px;
+  color: black;
+  margin: 0;
+  position: relative;
+
 }
 
 .macaron {
@@ -159,6 +205,119 @@ body {
   color: black;
   margin-bottom: 1rem;
 }
+
+/* section-productos */ 
+
+.section-productos {
+  padding: 80px;
+}
+
+.section-productos h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.section-productos p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--light-gray);
+
+}
+
+.producto_carrito{
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.producto_carrito:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.producto_carrito img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.producto-descripcion {
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-descripcion span {
+  color: var(--light-gray);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.producto-descripcion h5 {
+  color: var(--dark-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.producto-descripcion h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.carrito-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: var(--primary-color);
+  color: wheat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.carrito-btn:hover {
+  background-color: #f06f6f;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* clientes */ 
+
+#reseñas-clientes {
+  
+  padding: 3rem 1rem;
+  border-radius: 20px;
+}
+
+#contenedor-comentarios .card {
+  transition: all 0.3s ease-in-out;
+}
+
+#contenedor-comentarios .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 /* productos */ 
 
@@ -214,7 +373,7 @@ body {
 }
 
 .patisserie {
-  background-image: url(img/rool\ de\ canela.png);
+  background-image: url(img/rool.png);
   background-color: #e2a9b6;
 }
 
@@ -306,7 +465,7 @@ button {
 /* footer */
 
 .footer {
-  background-color: #f06f6f; /* rosa del footer */
+ 
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -339,28 +498,51 @@ button {
 
 /* Responsive */
 
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    color: #333;
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
+    align-items: center;
+    background-color: white;
     position: absolute;
-    top: 70px;
-    right: 0;
-    background: white;
+    top: 80px;
+    left: 0;
     width: 100%;
-    text-align: right;
-    padding: 1rem 2rem;
+    text-align: center;
+    z-index: 1000;
+
+  
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
-  .nav-links.active {
-    display: flex;
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
+}
 
-  .seccion_principal h1 {
+
+
+@media (max-width: 768px) {
+
+    .seccion_principal h1 {
     font-size: 5rem;
   }
 .seccion_principal h2 {
@@ -368,10 +550,11 @@ button {
   font-size: 5em;
 }
   .imagen-cupcake {
-    max-width: 200px;
-    margin-top: -3rem;
+    width: 200px;
+    margin-top: -3rem; 
   }
 }
+
 
 
 @media (max-width: 900px) {
@@ -412,3 +595,5 @@ button {
     text-align: left;
   }
 }
+
+

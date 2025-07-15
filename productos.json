@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tortas",
+    "precio": 2500,
+    "descripcion": "Tortas de todos los sabores",
+    "categoria": "Tortas",
+    "image": "img/torta.png"
+  },
+
+  {
+    "id": 2,
+    "nombre": "Cupcakes",
+    "precio": 3450,
+    "descripcion": "Cupcakes de todos los sabores",
+    "categoria": "Cupcakes",
+    "image": "img/cupcake.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Bombones",
+    "precio": 4356,
+    "descripcion": "Bombones de todos los sabores",
+    "categoria": "Bombones",
+    "image": "img/bombones.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Patisserie",
+    "precio": 3460,
+    "descripcion": "Patisserie de todos los sabores",
+    "categoria": "Patisserie",
+    "image": "img/rool.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Macarons",
+    "precio": 1230,
+    "descripcion": "Macarons de todos los sabores",
+    "categoria": "Macarons",
+    "image": "img/macaron.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Cookies",
+    "precio": 2395,
+    "descripcion": "Cookies de todos los sabores",
+    "categoria": "Cookies",
+    "image": "img/cookies.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Torta Mocha",
+    "precio": 3456,
+    "descripcion": "Mocha de todos los sabores",
+    "categoria": "Mocha",
+    "image": "img/mocha.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Brownie",
+    "precio": 4323,
+    "descripcion": "Brownie de todos los sabores",
+    "categoria": "Bronie",
+    "image": "img/brownie.png"
+  }
+]

@@ -4,13 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>proyecto integrador FRONT END</title>
+  <title>Proyecto integrador FRONT END</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="productos.html">
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/c76a731ccb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,17 +26,20 @@
     <div class="logo">
       <a href="#" class="logo">KETOOL <i class="fa-solid fa-cake-candles"></i></a>
     </div>
- <button class="menu-toggle" aria-label="Menú"><i class="fa-solid fa-bars"></i></button> 
-    
+    <button class="menu-toggle" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
 
-   
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#reseñas">Reseñas</a></li>
       <li><a href="productos.html">Productos</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <a href="carrito.html" class="carrito">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
     </ul>
   </nav>
+
+  
 
 
   <main>
@@ -37,9 +47,10 @@
     <section class="seccion_principal" id="inicio">
 
       <p class="bienvenida">Bienvenido a KETOOL</p>
+      <p class="bienvenida2">Donde lo dulce tambíen es saludable</p>
       <h2 class="textoPrincipal">EAT</h2>
       <img src="img/eat.png" alt="eat" class="imagen-cupcake">
-      <p class="bienvenida2">Donde lo dulce tambíen es saludable</p>
+      
 
     </section>
     <!-- seccion reseñas -->
@@ -82,6 +93,42 @@
 
 
 
+  
+
+    <section class="section-productos">
+
+<div class="container">
+  <h2 class="titulo-ofertas">PATISSERIE</h2>
+  <p>Ofertas de la semana</p>
+  <div  id="contenedor-productos"class="row">
+
+    <!-- <div class="row">
+
+      <div class="col-lg-3 cold-md-6 col-sm-6 mb-4">
+        <div class="producto_carrito">
+          <img src="img/cookies.png" alt="cookies" class="image-fluid">
+          <div class="producto-descripcion">
+              <span>Cookies</span>
+              <h5>Cookies de chocolate </h5>
+              <h4>$4.500</h4>
+          </div>
+        <a href="#" class="carrito">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div> 
+      </div>
+      
+      
+    </div> -->
+
+
+
+
+  </div>
+</div>
+    </section>
+
+
 
     <!-- seccion productos destacados -->
 
@@ -108,25 +155,40 @@
 
     </section>
 
+
+ <!-- clientes comentarios -->
+    <section id="reseñas" class="container my-5">
+  <h2 class="text-center mb-4">Reseñas de Clientes</h2>
+  <div id="contenedor-comentarios" class="row g-4">
+   
+  </div>
+</section>
+
+
     <!-- seccion contacto -->
     <section class="contacto" id="contacto">
       <div class="contenido">
+
         <div class="formulario">
           <h2 class="form-title">contacto</h2>
-          <form>
+          <form id="formulario" action="https://formspree.io/f/xzzvplgw" method="post">
+
             <label for="nombre">nombre</label>
-            <input type="text" id="nombre" placeholder="nombre" />
+            <input type="text" id="nombre" name="nombre" placeholder="nombre" required />
+            
 
             <label for="apellido">apellido</label>
-            <input type="text" id="apellido" placeholder="apellido" />
+            <input type="text" id="apellido" name="apellido" placeholder="apellido" required/>
 
             <label for="email">email</label>
-            <input type="email" id="email" placeholder="email" />
-
+            <input type="email" id="email"  name="email" placeholder="email" required />
+           
             <label for="mensaje">mensaje</label>
-            <input type="text" id="mensaje" placeholder="mensaje" />
+            <input type="text" id="mensaje" name="mensaje" placeholder="mensaje" required />
 
-            <button>enviar</button>
+            <button type="submit">enviar</button>
+
+            <div id="estado" class="error-text"></div>
           </form>
         </div>
         <div class="caja_imagen">
@@ -135,8 +197,6 @@
 
         </div>
       </div>
-
-
 
 
 
@@ -155,6 +215,15 @@
   </footer>
 
   </div>
+
+  <script src="script.js"></script>
+  <script src="validar.js"></script>
+  <script src="carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+
+
